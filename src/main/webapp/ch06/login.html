@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form 태그를 이용해 서버에 정보 전달</title>
+</head>
+<body style="margin: 40px;">
+	<h1>입력 폼</h1>
+	<hr>
+	<form action="/jw/ch06/login" method="post">
+		아이디  : <input type="text" name="uid"><br>
+		비밀번호: <input type="password" name="pwd"><br>
+		국적    : <input type="checkbox" name="country" value="KOR" checked> 대한민국
+				  <input type="checkbox" name="country" value="US"> 미국
+				  <input type="checkbox" name="country" value="GBR"> 영국
+				  <input type="checkbox" name="country" value="JPA"> 일본<br>
+		<input type="submit" value="확인"> 
+		<input type="reset" value="취소">
+	</form>
+	
+</body>
+</html>

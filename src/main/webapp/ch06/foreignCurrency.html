@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>환율 계산기</title>
+</head>
+<body style="margin: 40px;">
+	<h1>환율 계산기</h1>
+	<hr>
+	<form action="/jw/ch06/currency" method="get">
+		금액 : <input type="text" name="won">
+		<select name="currency">
+			<option value="0" selected>달러(USD)</option>
+			<option value="1">유로(EUR)</option>
+			<option value="2">옌(JPY)</option>
+			<option value="3">위안(CNY)</option>
+		</select>
+		<input type="submit" value="변환">
+		
+	</form>
+</body>
+</html>

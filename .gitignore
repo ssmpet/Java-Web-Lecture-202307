@@ -4,6 +4,7 @@ mysql.properties
 *.jar
 *.war
 *.class
+test.*
 
 .metadata/
 bin/
