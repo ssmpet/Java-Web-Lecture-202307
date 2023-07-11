@@ -22,15 +22,15 @@ public class Ex04_SourceBinding extends HttpServlet {
 		String[] fruits = "사과,배,감,귤".split(",");
 
 		// Request scope
-		request.setAttribute("requestAddr", "경기도 수원시 장안구 영화동 리퀘스트");
+		request.setAttribute("requestAddr", "경기도 수원시 장안구 조원동 리퀘스트");
 		request.setAttribute("requestFruits", fruits);
 		// Session scope
 		HttpSession session = request.getSession();
-		session.setAttribute("sessionAddr",  "경기도 수원시 장안구 영화동 세션");
+		session.setAttribute("sessionAddr",  "경기도 수원시 장안구 조원동 세션");
 		session.setAttribute("sessionFruits", fruits);
 		// Application scope
 		ServletContext ctx = getServletContext();
-		ctx.setAttribute("applicationAddr", "경기도 수원시 장안구 영화동 어플리케이션");
+		ctx.setAttribute("applicationAddr", "경기도 수원시 장안구 조원동 어플리케이션");
 		ctx.setAttribute("applicationFruits", fruits);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/ch08/dst4");
