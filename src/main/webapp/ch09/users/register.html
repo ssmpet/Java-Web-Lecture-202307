@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <style>
+        td { text-align: center; padding: 3px;}
+    </style>
+</head>
+<body style="margin: 40px;">
+    <h1>회원 가입</h1>
+    <hr>
+    <form action="/jw/ch09/users/register" method="post">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="uid"></td>
+            </tr>
+            <tr>
+                <td>패스워드</td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+            <tr>
+                <td>패스워드 확인</td>
+                <td><input type="password" name="pwd2"></td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="가입"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

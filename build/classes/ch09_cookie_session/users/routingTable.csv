@@ -1,0 +1,9 @@
+routing,method,입력 파라메터,Viewer 또는 다음 행선지,넘겨줄 파라메터,뷰어 파일이름
+/jw/ch09/users/list,get,-,listViewer,List<User>,User_ListViewer.java
+/jw/ch09/users/register.html,get,-,/jw/ch09/users/register,,
+/jw/ch09/users/register,post,"uid, pwd, pwd2, uname, email",/jw/ch09/users/list,,
+/jw/ch09/users/login,get,-,/jw/ch09/users/login,,
+/jw/ch09/users/login,post,"uid, pwd",/jw/ch09/users/list,,
+/jw/ch09/users/update,get,uid,updateViewer,User,UpdateViewer.java
+/jw/ch09/users/update,post,"uid, uname, email",/jw/ch09/users/list,,
+/jw/ch09/users/delete,get,uid,/jw/ch09/users/list,,

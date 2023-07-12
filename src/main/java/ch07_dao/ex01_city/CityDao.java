@@ -4,6 +4,7 @@ import java.security.DrbgParameters.Reseed;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +36,8 @@ public class CityDao {
 			pstmt.setInt(1, id);
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) {
-				city = new City(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5));
+				city = new City(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), 
+						rs.getInt(5));
 				
 			}
 			rs.close();
