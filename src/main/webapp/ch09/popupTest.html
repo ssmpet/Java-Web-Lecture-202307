@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Popup Test</title>
+	<script>
+		window.onload = pageload;
+		function pageload() {
+			let notShowPop = getCookieValue();
+			if (notShowPop != "true") {
+				window.open("popup.html", "pop", 
+					"width=400, height=500, histroy=no, resizable=no, status=no, menubar=no");
+			}
+		}
+		
+		function getCookieValue() {
+			let result = "false";
+			if (document.cookie != "") {
+				console.log(document.cookie);
+				let cookies = document.cookie.split(";");
+				for (let cookie of cookies) {
+					let elements = cookie.split("=");
+					let name = elements[0].trim();
+					if (name == "notShowPop")
+						result = elements[1];
+					
+				}
+			}
+			return result;
+		}
+		
+		function deleteCookie() {
+			document.cookie = "notShowPop=false; path=/; expires=-1";
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="쿠키삭제" onclick="deleteCookie()">
+	</form>
+
+</body>
+</html>
