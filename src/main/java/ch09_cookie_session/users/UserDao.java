@@ -30,7 +30,7 @@ public class UserDao {
 		
 		Connection conn = getConnection();
 		User user = null;
-		String sql = "select * from users where uid=?";
+		String sql = "select * from users where uid=? and isDeleted=0";
 		
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -61,7 +61,7 @@ public class UserDao {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 			while (rs.next()) {
-				
+
 				 list.add(new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),
 						LocalDate.parse(rs.getString(5)), rs.getInt(6)));
 			}

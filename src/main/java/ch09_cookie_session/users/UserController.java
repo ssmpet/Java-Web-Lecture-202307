@@ -18,6 +18,7 @@ import org.mindrot.jbcrypt.BCrypt;
  * Servlet implementation class UserController
  * WebServlet 안의 주소값 외에는 받지 않는다.
  */
+//@WebServlet("/ch09/users/*") 로 사용할 수도 있음
 @WebServlet({ "/ch09/users/list", "/ch09/users/register", "/ch09/users/update", "/ch09/users/delete", "/ch09/users/login", "/ch09/users/logout" })
 public class UserController extends HttpServlet {
 	
@@ -76,6 +77,8 @@ public class UserController extends HttpServlet {
 			UserService us = new UserService();
 			int result = us.login(uid, pwd);
 			if (result == UserService.CORRECT_LOGIN) {
+				
+				// 세션에 추가
 				session.setAttribute("uid", uid);
 				uname = uDao.getUser(uid).getUname();
 				session.setAttribute("uname", uname);
