@@ -21,7 +21,7 @@ public class CityController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String requestUri = request.getRequestURI();
-		System.out.println(requestUri);
+//		System.out.println(requestUri);
 		String[] cmd_ = requestUri.split("/");
 		String cmd = cmd_[cmd_.length - 1];	// list, update, delete, insert
 		String html = "";
