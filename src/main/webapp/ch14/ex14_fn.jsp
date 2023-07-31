@@ -4,7 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <c:set var="title1" value="Hello World!"/>
-<c:set var="title2" value="쇼핑몰 중심 JSP Mall!"/>
+<c:set var="title2" value="쇼핑\"몰\" 중심 JSP Mall!"/>
 <c:set var="str" value="중심"/>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
 		<tr><td>\${fn:length(title1)}</td><td>${fn:length(title1)}</td></tr>
 		<tr><td>\${fn:toUpperCase(title1)}</td><td>${fn:toUpperCase(title1)}</td></tr>
 		<tr><td>\${fn:substring(title1, 3, 6)}</td><td>${fn:substring(title1, 3, 6)}</td></tr>
-		<tr><td>\${fn:replace(title1," ","/")}</td><td>${fn:replace(title1," ","/")}</td></tr>
+		<tr><td>\${fn:replace(title1," ","/")}</td><td>${fn:replace(title2," ","/")}</td></tr>
 		<tr><td>\${fn:indexOf(title2, str)}</td><td>${fn:indexOf(title2, str)}</td></tr>
 		<tr><td>\${fn:contains(title2, str)}</td><td>${fn:contains(title2, str)}</td></tr>
 	</table>
